@@ -1,11 +1,11 @@
 package com.websystique.springboot.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class HelloController {
 
 	@RequestMapping("/")
@@ -17,6 +17,6 @@ public class HelloController {
 
 	@GetMapping("/hello")
 	public String hello() {
-		return "hello world";
+		return "{\"name\": \"wes\"}";
 	}
 }
